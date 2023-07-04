@@ -14,7 +14,7 @@ docker exec -it node-app bash
 docker volume -ls
 docker remove prune 
 docker rm node-app -fv
-
+docker-compose up -d
 printenv
 
 # ==== To observe changes in your files instantly ====
@@ -52,3 +52,5 @@ touch: cannot touch 'urmom': Read-only file system
 `docker run -v ${pwd}:/app:ro -v /app/node_modules --env PORT=4000 -p 5000:5000 -d --name node-app node-app-image`
 
 or simply make a .env file and write env's there.
+
+
