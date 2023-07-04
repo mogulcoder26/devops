@@ -27,3 +27,8 @@ docker run -p 5000:5000 -d --name node-app node-app-image -v %cd%:/app
 - we uninstall node_modules and run the docker container, but it fails to load 
 REASON ? :
 - when we use the -v flag , it Syncs the local dir with container dir , and hence the node -module installed as per the docker image gets uninstalledby syncing with local dir
+
+docker run -v ${pwd}:/app -v /app/node_modules -p 5000:5000 -d --name node-app node-app-image
+
+Do we need our COPY . ./ command if we are using the -v bind mount flag to sync with the folder ?
+Ans : Yes. as we use the bind mount mode just in Development.For Production we definitely need COPY . ./
