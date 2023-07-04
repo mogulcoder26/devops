@@ -9,3 +9,4 @@ docker run -d --name node-app  node-app-image
 docker ps
 docker rm node-app -f
 docker run -p 5000:5000 -d --name node-app2 node-app-image
+docker exec -it node-app bash
