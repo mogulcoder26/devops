@@ -32,3 +32,14 @@ docker run -v ${pwd}:/app -v /app/node_modules -p 5000:5000 -d --name node-app n
 
 Do we need our COPY . ./ command if we are using the -v bind mount flag to sync with the folder ?
 Ans : Yes. as we use the bind mount mode just in Development.For Production we definitely need COPY . ./
+
+But : to prevent the container's writing abilities to alter our source code -->
+pass this flag -->
+docker run -v ${pwd}:/app:ro -v /app/node_modules -p 5000:5000 -d --name node-app node-app-image
+
+Output : 
+```
+root@f8fe10ac70b7:/app# touch urmom
+touch: cannot touch 'urmom': Read-only file system
+```
+
