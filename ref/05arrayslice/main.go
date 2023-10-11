@@ -17,6 +17,13 @@ func main() {
 	// fruitList = fruitList[1:2]
 
 	arr := []string{"one", "two", "three", "four", "five"}
-	arr = append(arr[:3],arr[4:]...)
+	arr = append(arr[:3], arr[4:]...)
 	fmt.Println(arr)
+
+	hoes := make(map[string]int, 5)
+	hoes["Sid"] = 1000
+	hoes["Soubhik"] = 0
+
+	fmt.Println(hoes)
+
 }
