@@ -23,7 +23,14 @@ func main() {
 	hoes := make(map[string]int, 5)
 	hoes["Sid"] = 1000
 	hoes["Soubhik"] = 0
+	hoes["naba"] = 3
 
 	fmt.Println(hoes)
+	delete(hoes, "Soubhik")
+	fmt.Println(hoes)
+
+	for key, val := range hoes {
+		fmt.Printf("Key = %s Value = %d\n", key, val)
+	}
 
 }
