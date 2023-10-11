@@ -1,22 +1,26 @@
 # devops-node
 
 # ==== Basic Commands ====
-docker build .
-docker image ls 
-docker image rm <image id >
-docker build -t node-app-image
-docker image ls 
-docker run -d --name node-app  node-app-image
-docker ps
-docker rm node-app -f
-docker run -p 5000:5000 -d --name node-app2 node-app-image
-docker exec -it node-app bash
-docker volume -ls
-docker remove prune 
-docker rm node-app -fv
-docker-compose up -d
-printenv
-
+- `docker build .`
+- `docker image ls` 
+- `docker image rm <image id >`
+- `docker build -t node-app-image`
+- `docker image ls `
+- `docker run -d --name node-app  node-app-image`
+- `docker ps`
+- `docker rm node-app -f`
+- `docker run -p 5000:5000 -d --name node-app2 node-app-image`
+- `docker exec -it node-app bash`
+- `docker volume -ls`
+- `docker remove prune `
+- `docker rm node-app -fv`
+- `docker-compose up -d`
+- `docker-compose up -d --build //builds a fresh image and does`
+- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml -d up`
+- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v`
+- `docker-compose -f docker-compose.yml -f docker-compose.prod.yml -d up`
+- `docker-compose -f docker-compose.yml -f docker-compose.prod.yml -d down -v `
+- `printenv`
 # ==== To observe changes in your files instantly ====
 Step 1 : 
 - build the image again
@@ -46,6 +50,7 @@ pass this flag -->
 ```
 root@f8fe10ac70b7:/app# touch urmom
 touch: cannot touch 'urmom': Read-only file system
+
 ```
 
 # ===to load env manually:===
