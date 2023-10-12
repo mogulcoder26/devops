@@ -1,61 +1,39 @@
-# devops-node
+# Golang series
 
-# ==== Basic Commands ====
-- `docker build .`
-- `docker image ls` 
-- `docker image rm <image id >`
-- `docker build -t node-app-image`
-- `docker image ls `
-- `docker run -d --name node-app  node-app-image`
-- `docker ps`
-- `docker rm node-app -f`
-- `docker run -p 5000:5000 -d --name node-app2 node-app-image`
-- `docker exec -it node-app bash`
-- `docker volume -ls`
-- `docker remove prune `
-- `docker rm node-app -fv`
-- `docker-compose up -d`
-- `docker-compose up -d --build //builds a fresh image and does`
-- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml -d up`
-- `docker-compose -f docker-compose.yml -f docker-compose.dev.yml down -v`
-- `docker-compose -f docker-compose.yml -f docker-compose.prod.yml -d up`
-- `docker-compose -f docker-compose.yml -f docker-compose.prod.yml -d down -v `
-- `printenv`
-# ==== To observe changes in your files instantly ====
-Step 1 : 
-- build the image again
+A complete guide to undersatnd golang programming language, web requests, JSON and creating web APIs with mongodb
 
-Step 2 :(easy)
+# [LearnCodeonline.in](https://pro.learncodeonline.in/learn)
 
-- `docker run -p 5000:5000 -d --name node-app node-app-image -v C:\Users\IIIT\Documents\Codes\devops-node\devops-node\:/app`
+## 01 Introduction to golang
 
-or 
+## 02 Basics of golang
 
-`docker run -p 5000:5000 -d --name node-app node-app-image -v %cd%:/app`
+## 03 Memory management and datatypes in golang
 
-### we uninstall node_modules and run the docker container, but it fails to load.REASON ? :
-> when we use the -v flag , it Syncs the local dir with container dir , and hence the node -module installed as per the docker image gets uninstalledby syncing with local dir
+## 04 Flow control in golang
 
-`docker run -v ${pwd}:/app -v /app/node_modules -p 5000:5000 -d --name node-app node-app-image`
+## 05 Moving to web and modules
 
-### Do we need our COPY . ./ command if we are using the -v bind mount flag to sync with the folder ?
-> Yes. as we use the bind mount mode just in Development.For Production we definitely need COPY . ./
+## 06 Building API in golang
 
-### To prevent the container's writing abilities to alter our source code in local machine-->
-pass this flag -->
-`docker run -v ${pwd}:/app:ro -v /app/node_modules -p 5000:5000 -d --name node-app node-app-image`
+## 07 Building API with mongoDB
 
-## Output : 
+## 08 Goroutines, mutex and channel
 
-```
-root@f8fe10ac70b7:/app# touch urmom
-touch: cannot touch 'urmom': Read-only file system
+> Future updates might come in this series but they will be uploaded only on LearnCodeonline.
 
-```
+## Will there be any support for questions in this series.
 
-# ===to load env manually:===
-`docker run -v ${pwd}:/app:ro -v /app/node_modules --env PORT=4000 -p 5000:5000 -d --name node-app node-app-image`
+Support for questions is available in all paid series only at LCO.
 
-or simply make a .env file and write env's there.
+## There is a mistake in your code/explanation.
 
+It might be and I am sorry for that. Just send me updated version or explanation and I would love to add that below.
 
+---
+
+---
+
+## Where can I reach you?
+
+You can reach me at [Instagram](https://www.instagram.com/hiteshchoudharyofficial/)
